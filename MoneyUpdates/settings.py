@@ -56,7 +56,7 @@ CORS_ORIGIN_WHITELIST = (
     "www.moneyupdates.xyz",
 )
 # CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"] 
-CSRF_TRUSTED_ORIGINS = ["www.moneyupdates.xyz",'moneyupdates.xyz'] 
+# CSRF_TRUSTED_ORIGINS = ["www.moneyupdates.xyz",'moneyupdates.xyz'] 
 
 
 ROOT_URLCONF = 'MoneyUpdates.urls'
