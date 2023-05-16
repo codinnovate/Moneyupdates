@@ -53,8 +53,11 @@ CORS_ALLOW_CREDENTIALS = False
 
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
+        "http://localhost:3000",
     "http://localhost:8000",
     "www.moneyupdates.xyz",
+    "https://moneyupdates.xyz",
+    "https://kickascammer.havcot.com",
 )
 CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"] 
 CSRF_TRUSTED_ORIGINS = ["https://moneyupdates.up.railway.app"] 
