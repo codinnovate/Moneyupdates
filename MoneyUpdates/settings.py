@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1%@#8!xoxjdx(xxomzgds^fuae2^hsrv5#w#wx@gvhah&*qd16'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -53,8 +53,10 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
     "http://localhost:8000",
+    "www.moneyupdates.xyz",
 )
-CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"] 
+# CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"] 
+CSRF_TRUSTED_ORIGINS = ["www.moneyupdates.xyz",'moneyupdates.xyz'] 
 
 
 ROOT_URLCONF = 'MoneyUpdates.urls'
@@ -129,21 +131,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# AWS_ACCESS_KEY_ID = 'AKIAVCAS36ML2UPN2DWL'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'himago'
+AWS_ACCESS_KEY_ID = 'AKIAVCAS36ML2UPN2DWL'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'himago'
 
 
-# AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL = None
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# SECURE_SSL_REDIRECT = True
-# SECURE_HSTS_SECONDS = 2592000
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-# SECURE_HSTS_PRELOAD = True
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 2592000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'
-
 
