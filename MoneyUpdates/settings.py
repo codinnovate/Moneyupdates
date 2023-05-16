@@ -53,7 +53,7 @@ CORS_ALLOW_CREDENTIALS = False
 
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
-        "http://localhost:3000",
+    'https://havcot.netlify.app",
     "http://localhost:8000",
     "www.moneyupdates.xyz",
     "https://moneyupdates.xyz",
