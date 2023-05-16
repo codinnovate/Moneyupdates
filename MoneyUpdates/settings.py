@@ -49,15 +49,22 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CORS_ALLOW_CREDENTIALS = False
 
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
     "http://localhost:8000",
     "www.moneyupdates.xyz",
 )
-# CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"] 
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"] 
 CSRF_TRUSTED_ORIGINS = ["https://moneyupdates.up.railway.app"] 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES":[
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ],
 
+
+}
 
 ROOT_URLCONF = 'MoneyUpdates.urls'
 
