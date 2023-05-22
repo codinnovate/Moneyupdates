@@ -39,12 +39,12 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -63,7 +63,7 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
 CSRF_TRUSTED_ORIGINS = ["https://moneyupdates.up.railway.app"] 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES":[
-        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+   'rest_framework.permissions.AllowAny',
     ],
 
 
