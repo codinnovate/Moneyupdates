@@ -53,11 +53,13 @@ CORS_ALLOW_CREDENTIALS = False
 
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
-    'https://havcot.netlify.app",
+    "https://havcot.netlify.app",
     "http://localhost:8000",
     "www.moneyupdates.xyz",
     "https://moneyupdates.xyz",
     "https://kickascammer.havcot.com",
+    "https://jobs.havcot.com",
+    "https://havcot.com",
 )
 CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"] 
 CSRF_TRUSTED_ORIGINS = ["https://moneyupdates.up.railway.app"] 
