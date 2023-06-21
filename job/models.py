@@ -53,7 +53,7 @@ class Job(models.Model):
     slug = models.SlugField(max_length=255, null=True, blank=True)
     details = models.TextField(blank=False, null=True)
     company = models.ForeignKey(Company, blank=False, on_delete=models.CASCADE)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     color = models.CharField(choices=Colors, default='#66a6ff', max_length=200, null=True, blank=True)
     tag = models.ManyToManyField(Tag)
